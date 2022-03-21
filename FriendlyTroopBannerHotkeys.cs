@@ -13,10 +13,10 @@ namespace FriendlyTroopBannerHotkeys
     class FriendlyTroopBannerHotkeys
     {
         public const string ModName = "FriendlyTroopBannerHotkeys";
-        public const string ModVersion = "v1.2.0";
+        public const string ModVersion = "v2.0.0";
 
         // Start with option state from game settings
-        static bool initialOptionState = ManagedOptions.GetConfig(ManagedOptions.ManagedOptionsType.ShowBannersOnFriendlyTroops) == 1f;
+        static bool initialOptionState = false;
         static bool lastOptionState = initialOptionState;
         static bool newOptionState = initialOptionState;
         static bool lastTempToggleKeyState = false;
@@ -27,7 +27,7 @@ namespace FriendlyTroopBannerHotkeys
         public static void OnMissionScreenTickPostfixPatch(MissionView __instance, float dt)
         {
             // Stay in sync with any changes to the setting made in the game settings
-            bool currentOptionState = ManagedOptions.GetConfig(ManagedOptions.ManagedOptionsType.ShowBannersOnFriendlyTroops) == 1f;
+            bool currentOptionState = ManagedOptions.GetConfig(ManagedOptions.ManagedOptionsType.FriendlyTroopsBannerOpacity) > 0f;
             if (currentOptionState != lastOptionState)
             {
                 initialOptionState = lastOptionState = newOptionState = currentOptionState;
@@ -58,7 +58,7 @@ namespace FriendlyTroopBannerHotkeys
             if (newOptionState != lastOptionState)
             {
                 lastOptionState = newOptionState;
-                ManagedOptions.SetConfig(ManagedOptions.ManagedOptionsType.ShowBannersOnFriendlyTroops, newOptionState ? 1f : 0f);
+                ManagedOptions.SetConfig(ManagedOptions.ManagedOptionsType.FriendlyTroopsBannerOpacity, newOptionState ? 1f : 0f);
             }
         }
     }
