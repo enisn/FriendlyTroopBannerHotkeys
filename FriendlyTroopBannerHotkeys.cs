@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection.Emit;
 using TaleWorlds.InputSystem;
 using TaleWorlds.MountAndBlade;
-using TaleWorlds.MountAndBlade.View.Missions;
+using TaleWorlds.MountAndBlade.View.MissionViews;
 
 namespace FriendlyTroopBannerHotkeys
 {
