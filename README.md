@@ -11,3 +11,6 @@ This version of mod, changes opacity between 0 and 1.
 - Open the game and go to settings
   - Set friendly troop banner opacity as `0` _(Slide left the slider)_
 - Enter a battle and hold `ALT` key, you'll see friendly troop banners while holding `ALT` key.
+
+## Nexus Link
+https://www.nexusmods.com/mountandblade2bannerlord/mods/4615
