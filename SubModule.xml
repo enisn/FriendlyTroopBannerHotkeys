@@ -1,11 +1,11 @@
-﻿<Module>
+<Module>
   <Name value="Friendly Troop Banner Hotkeys - 1.0.1 (stable)"/>
   <Id value="FriendlyTroopBannerHotkeys"/>
-  <Version value="v1.5.1"/>
+  <Version value="v1.5.2"/>
   <SingleplayerModule value="true"/>
   <MultiplayerModule value="false"/>
   <DependedModules>
-    <DependedModule Id="Harmony"/>
+    <DependedModule Id="Bannerlord.Harmony"/>
     <DependedModule Id="Native"/>
     <DependedModule Id="SandBoxCore"/>
     <DependedModule Id="Sandbox"/>
